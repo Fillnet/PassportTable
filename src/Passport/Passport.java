@@ -8,12 +8,14 @@ public class Passport {
     private final String lastName;
     private final String name;
     private final String middleName;
+    private final int birthDate;
 
-    public Passport(int serialNumber, String lastName, String name, String middleName) {
+    public Passport(int serialNumber, String lastName, String name, String middleName,int birthDate) {
         this.serialNumber = serialNumber;
         this.lastName = lastName;
         this.name = name;
         this.middleName = middleName;
+        this.birthDate=birthDate;
     }
 
 
@@ -33,6 +35,9 @@ public class Passport {
         return middleName;
     }
 
+    public int getBirthDate() {
+        return birthDate;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -57,7 +62,8 @@ public class Passport {
                 "serialNumber=" + serialNumber +
                 ", lastName='" + lastName + '\'' +
                 ", name='" + name + '\'' +
-                ", middleName='" + middleName + '\n' +
+                ", middleName='" + middleName +
+                ", birth date='"+birthDate+'\n'+
                 '}';
     }
 }
