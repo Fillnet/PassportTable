@@ -23,8 +23,10 @@ public class Main {
 //        System.out.println(passportList);
         System.out.println(passportList.findNumber(3142));
         passportList.addPassport(levitan1);
+
 //        System.out.println(passportList);
         System.out.println(passportList.findNumber(3142));
+        System.out.println(levitan1.getSerialNumber());
     }
 
 }

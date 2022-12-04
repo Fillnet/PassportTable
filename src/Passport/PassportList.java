@@ -9,8 +9,13 @@ public class PassportList {
     public Set<Passport> passports = new HashSet<>();
 
     public void addPassport(Passport passport) {
-        this.passports.add(passport);
+        if (findNumber(passport.getSerialNumber())!=null) {
+            this.passports.remove(passport);
         }
+            this.passports.add(passport);
+    }
+
+
 
     public Passport findNumber(int number) {
         for (Passport passport : passports) {
